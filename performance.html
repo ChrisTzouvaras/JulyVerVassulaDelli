@@ -216,15 +216,15 @@ h2 {
   <div class="navbar-container">
     <div class="brand-info">
       <button class="name-button" onclick="window.location.href='index.html'" id="name-button" data-gr="ΒΑΣΟΥΛΑ ΔΕΛΛΗ" data-en="VASSULA DELLI">ΒΑΣΟΥΛΑ ΔΕΛΛΗ</button>
-      <p id="title-text" data-gr="ΜΟΥΣΙΚΟΣ / PERFORMER / ΣΥΝΘΕΤΡΙΑ / ΠΑΙΔΑΓΩΓΟΣ" data-en="MUSICIAN / PERFORMER / COMPOSER / EDUCATOR">
+     <!--<p id="title-text" data-gr="ΜΟΥΣΙΚΟΣ / PERFORMER / ΣΥΝΘΕΤΡΙΑ / ΠΑΙΔΑΓΩΓΟΣ" data-en="MUSICIAN / PERFORMER / COMPOSER / EDUCATOR">
         ΜΟΥΣΙΚΟΣ / PERFORMER / ΣΥΝΘΕΤΡΙΑ / ΠΑΙΔΑΓΩΓΟΣ
-      </p>
+      </p>-->
     </div>
     <button class="hamburger" onclick="toggleMenu()">☰</button>
     <ul class="nav-links">
       <li class="close-btn"><a href="javascript:void(0)" onclick="toggleMenu()">✕</a></li>
-      <li><a href="bio.html" class="lang" data-gr="Βιογραφικό" data-en="Biography(Bio)">Βιογραφικό</a></li>
-      <li><a href="performance.html" class="lang" data-gr="Παραστάσεις" data-en="Performances(Stage Work)">Παραστάσεις</a></li>
+      <li><a href="bio.html" class="lang" data-gr="Βιογραφικό" data-en="Biography">Βιογραφικό</a></li>
+      <li><a href="performance.html" class="lang" data-gr="Παραστάσεις" data-en="Performances">Παραστάσεις</a></li>
       <li><a href="maestro.html" class="lang" data-gr="Μουσική Προετοιμασία - Διδασκαλία" data-en="Music Preparation – Teaching">Μουσική Προετοιμασία - Διδασκαλία</a></li>
       <li><a href="discography.html" class="lang" data-gr="Δισκογραφία" data-en="Discography">Δισκογραφία</a></li>
       <li><a href="contact.html" class="lang" data-gr="Επικοινωνία" data-en="Contact">Επικοινωνία</a></li>
@@ -292,7 +292,7 @@ h2 {
       <img src="Μάρθα Μια ιστορία από το Μεσολόγγι_Τάσης Χριστογιαννόπουλος_φωτο Γιώργος Σπανός.jpg" alt="Μάρθα">
     </a>
     <a href="martha.html" class="performance-title lang" data-gr="ΜΑΡΘΑ ΜΙΑ ΙΣΤΟΡΙΑ ΑΠΟ ΤΟ ΜΕΣΟΛΟΓΓΙ" data-en="MARTHA A STORY FROM MESOLONGHI">ΜΑΡΘΑ ΜΙΑ ΙΣΤΟΡΙΑ ΑΠΟ ΤΟ ΜΕΣΟΛΟΓΓΙ</a>
-    <p class="performance-role lang" data-en="SINGER (PLEIADES)" data-gr="ΤΡΑΓΟΥΔΙΣΤΡΙΑ (ΠΛΕΙΑΔΕΣ)"></p>
+    <p class="performance-role lang" data-en="SINGER (PLEIADES)" data-gr="ΤΡΑΓΟΥΔΙΣΤΡΙΑ (ΠΛΕΙΑΔΕΣ)">SINGER (PLEIADES)</p>
   </div>
 
   <div class="performance-item">
@@ -356,29 +356,11 @@ h2 {
 </div>
 <hr>
 <footer>
-  <p>&copy; 2025 Βασούλα Δελλή<br>Created by Chris Tzouvaras</p>
+  <p>&copy; 2025 Vassula Delli<br>
+     Created by Chris Tzouvaras</p>
 </footer>
 
-<script>
-  function toggleMenu() {
-    document.querySelector('.nav-links').classList.toggle('open');
-  }
-
-  function toggleLanguage() {
-    let isGreek = document.getElementById('name-button').textContent === document.getElementById('name-button').getAttribute('data-gr');
-    document.querySelectorAll('.lang').forEach(el => {
-      el.innerHTML = isGreek ? el.getAttribute('data-en') : el.getAttribute('data-gr');
-    });
-    document.getElementById('title-text').textContent = isGreek
-      ? document.getElementById('title-text').getAttribute('data-en')
-      : document.getElementById('title-text').getAttribute('data-gr');
-    document.getElementById('name-button').textContent = isGreek
-      ? document.getElementById('name-button').getAttribute('data-en')
-      : document.getElementById('name-button').getAttribute('data-gr');
-    document.querySelector('.lang-toggle').textContent = isGreek ? "GR" : "EN";
-  }
-</script>
-
+  <script src="language.js"></script>
 
 </body>
 </html>

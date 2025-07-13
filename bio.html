@@ -195,11 +195,16 @@
 
       .bio-text {
         text-align: justify;
+
       }
 
       .section-title {
         margin-left: 20px;
       }
+
+      strong {
+  font-weight: bold;
+}
     }
   </style>
 </head>
@@ -209,15 +214,15 @@
   <div class="navbar-container">
     <div class="brand-info">
       <button class="name-button" onclick="window.location.href='index.html'" id="name-button" data-gr="ΒΑΣΟΥΛΑ ΔΕΛΛΗ" data-en="VASSULA DELLI">ΒΑΣΟΥΛΑ ΔΕΛΛΗ</button>
-      <p id="title-text" data-gr="ΜΟΥΣΙΚΟΣ / PERFORMER / ΣΥΝΘΕΤΡΙΑ / ΠΑΙΔΑΓΩΓΟΣ" data-en="MUSICIAN / PERFORMER / COMPOSER / EDUCATOR">
+    <!--<p id="title-text" data-gr="ΜΟΥΣΙΚΟΣ / PERFORMER / ΣΥΝΘΕΤΡΙΑ / ΠΑΙΔΑΓΩΓΟΣ" data-en="MUSICIAN / PERFORMER / COMPOSER / EDUCATOR">
         ΜΟΥΣΙΚΟΣ / PERFORMER / ΣΥΝΘΕΤΡΙΑ / ΠΑΙΔΑΓΩΓΟΣ
-      </p>
+      </p>-->
     </div>
     <button class="hamburger" onclick="toggleMenu()">☰</button>
     <ul class="nav-links">
       <li class="close-btn"><a href="javascript:void(0)" onclick="toggleMenu()">✕</a></li>
-      <li><a href="bio.html" class="lang" data-gr="Βιογραφικό" data-en="Biography(Bio)">Βιογραφικό</a></li>
-      <li><a href="performance.html" class="lang" data-gr="Παραστάσεις" data-en="Performances(Stage Work)">Παραστάσεις</a></li>
+      <li><a href="bio.html" class="lang" data-gr="Βιογραφικό" data-en="Biography">Βιογραφικό</a></li>
+      <li><a href="performance.html" class="lang" data-gr="Παραστάσεις" data-en="Performances">Παραστάσεις</a></li>
       <li><a href="maestro.html" class="lang" data-gr="Μουσική Προετοιμασία - Διδασκαλία" data-en="Music Preparation – Teaching">Μουσική Προετοιμασία - Διδασκαλία</a></li>
       <li><a href="discography.html" class="lang" data-gr="Δισκογραφία" data-en="Discography">Δισκογραφία</a></li>
       <li><a href="contact.html" class="lang" data-gr="Επικοινωνία" data-en="Contact">Επικοινωνία</a></li>
@@ -229,6 +234,18 @@
 <br>
 <br>
 <br>
+
+<br>
+<br>
+<br>
+<div style="padding-left: 83px; text-align: left;">
+    <p class="title-text lang" 
+data-gr="<strong>Bασούλα Δελλή</strong>" 
+data-en="<strong>Vassula Delli</strong>">
+<strong>Bασούλα Δελλή</strong>
+</p>
+    <hr style="margin-left: 0;">
+  </div>
 
 <!-- Bio Content -->
 <div class="bio-container">
@@ -250,6 +267,7 @@ She has studied classical singing and opera at the State Conservatory of Thessal
 Έχει σπουδάσει κλασικό τραγούδι και όπερα στο Κρατικό Ωδείο Θεσσαλονίκης, πιάνο και ανώτερα θεωρητικά.
         </p>
     </div>
+
 
     <div class="bio-section">
         <img src="./IMG_8876bw.jpg" class="profile-image" alt="Vassula Delli">
@@ -283,7 +301,7 @@ Since 2014, she has been working as a musician and piano teacher at the Montesso
 <div style="padding-left: 83px; text-align: left;">
     <p class="title-text lang" 
 data-gr="<strong>Φωνητικό Σύνολο Πλειάδες</strong>" 
-data-en="<strong>Pleiades Female Vocal Ensemble</strong>">
+data-en="<strong>Pleiades Vocal Group</strong>">
 <strong>Φωνητικό Σύνολο Πλειάδες</strong>
 </p>
     <hr style="margin-left: 0;">
@@ -311,7 +329,7 @@ data-en="<strong>Pleiades Female Vocal Ensemble</strong>">
         συνεργασία με τους encardia (2015). Το 2020 κυκλοφόρησε το τελευταίο τους
         ά λμπουμ “Πολυφωνικές Διαδρομές” με πολυφωνικά τραγούδια κ υρ ίως α π ό
         χ ώ ρες της Μεσογείου.
-" data-en="The female vocal ensemble Pleiades was founded in May 2006 in Thessaloniki.
+" data-en="The female vocal group Pleiades was founded in May 2006 in Thessaloniki.
 Having the study and interpretation of Greek-language polyphony from the Epirus region as a starting point, Pleiades have expanded their vocal explorations to include music from various traditions around the world, enriching their repertoire with polyphonic songs, both authentic and creatively reworked by the ensemble/group.
 
 They experiment and collaborate with contemporary artists (Nikos Kypourgos, Dimitris Sotiriou, Ioanna Manoledaki, VIC, Rotting Christ, Alexandros Tsolakis, Kyriaki Goni, Nikos Xydakis, Kat Valastur, among others), seeking to creatively fuse the oral tradition of polyphonic singing with modern forms of musical expression.
@@ -346,29 +364,11 @@ DVD απότην παράσταση “Γυναίκες της Πέτρας” �
     <hr>      
 
 <footer>
-  <p>&copy; 2025 Βασούλα Δελλή<br>
+  <p>&copy; 2025 Vassula Delli<br>
      Created by Chris Tzouvaras</p>
 </footer>
 
-<script>
-  function toggleMenu() {
-    document.querySelector('.nav-links').classList.toggle('open');
-  }
-
-  function toggleLanguage() {
-    let isGreek = document.getElementById('name-button').textContent === document.getElementById('name-button').getAttribute('data-gr');
-    document.querySelectorAll('.lang').forEach(el => {
-      el.innerHTML = isGreek ? el.getAttribute('data-en') : el.getAttribute('data-gr');
-    });
-    document.getElementById('title-text').textContent = isGreek
-      ? document.getElementById('title-text').getAttribute('data-en')
-      : document.getElementById('title-text').getAttribute('data-gr');
-    document.getElementById('name-button').textContent = isGreek
-      ? document.getElementById('name-button').getAttribute('data-en')
-      : document.getElementById('name-button').getAttribute('data-gr');
-    document.querySelector('.lang-toggle').textContent = isGreek ? "GR" : "EN";
-  }
-</script>
+  <script src="language.js"></script>
 
 
 </body>

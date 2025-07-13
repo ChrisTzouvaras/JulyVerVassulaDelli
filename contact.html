@@ -207,15 +207,15 @@
   <div class="navbar-container">
     <div class="brand-info">
       <button class="name-button" onclick="window.location.href='index.html'" id="name-button" data-gr="ΒΑΣΟΥΛΑ ΔΕΛΛΗ" data-en="VASSULA DELLI">ΒΑΣΟΥΛΑ ΔΕΛΛΗ</button>
-      <p id="title-text" data-gr="ΜΟΥΣΙΚΟΣ / PERFORMER / ΣΥΝΘΕΤΡΙΑ / ΠΑΙΔΑΓΩΓΟΣ" data-en="MUSICIAN / PERFORMER / COMPOSER / EDUCATOR">
+      <!--<p id="title-text" data-gr="ΜΟΥΣΙΚΟΣ / PERFORMER / ΣΥΝΘΕΤΡΙΑ / ΠΑΙΔΑΓΩΓΟΣ" data-en="MUSICIAN / PERFORMER / COMPOSER / EDUCATOR">
         ΜΟΥΣΙΚΟΣ / PERFORMER / ΣΥΝΘΕΤΡΙΑ / ΠΑΙΔΑΓΩΓΟΣ
-      </p>
+      </p>-->
     </div>
     <button class="hamburger" onclick="toggleMenu()">☰</button>
     <ul class="nav-links">
          <li class="close-btn"><a href="javascript:void(0)" onclick="toggleMenu()">✕</a></li>
-      <li><a href="bio.html" class="lang" data-gr="Βιογραφικό" data-en="Biography(Bio)">Βιογραφικό</a></li>
-      <li><a href="performance.html" class="lang" data-gr="Παραστάσεις" data-en="Performances(Stage Work)">Παραστάσεις</a></li>
+      <li><a href="bio.html" class="lang" data-gr="Βιογραφικό" data-en="Biography">Βιογραφικό</a></li>
+      <li><a href="performance.html" class="lang" data-gr="Παραστάσεις" data-en="Performances">Παραστάσεις</a></li>
       <li><a href="maestro.html" class="lang" data-gr="Μουσική Προετοιμασία - Διδασκαλία" data-en="Music Preparation – Teaching">Μουσική Προετοιμασία - Διδασκαλία</a></li>
       <li><a href="discography.html" class="lang" data-gr="Δισκογραφία" data-en="Discography">Δισκογραφία</a></li>
       <li><a href="contact.html" class="lang" data-gr="Επικοινωνία" data-en="Contact">Επικοινωνία</a></li>
@@ -249,40 +249,10 @@
 </div>
 <hr>
 <footer>
-  <p>&copy; 2025 Βασούλα Δελλή<br> Created by Chris Tzouvaras</p>
+  <p>&copy; 2025 Vassula Delli<br>
+     Created by Chris Tzouvaras</p>
 </footer>
 
-<script>
-  function toggleMenu() {
-    document.querySelector('.nav-links').classList.toggle('open');
-  }
-
-  function toggleLanguage() {
-    let nameBtn = document.getElementById('name-button');
-    let titleText = document.getElementById('title-text');
-    let isGreek = nameBtn.textContent === nameBtn.getAttribute('data-gr');
-
-    document.querySelectorAll('.lang').forEach(el => {
-      // For regular elements
-      if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
-        if (el.hasAttribute("placeholder")) {
-          el.placeholder = isGreek ? el.getAttribute("data-en") : el.getAttribute("data-gr");
-        }
-        if (el.type === "submit" && el.hasAttribute("value")) {
-          el.value = isGreek ? el.getAttribute("data-en") : el.getAttribute("data-gr");
-        }
-      } else {
-        el.innerHTML = isGreek ? el.getAttribute("data-en") : el.getAttribute("data-gr");
-      }
-    });
-
-    titleText.innerHTML = isGreek ? titleText.getAttribute('data-en') : titleText.getAttribute('data-gr');
-    nameBtn.textContent = isGreek ? nameBtn.getAttribute('data-en') : nameBtn.getAttribute('data-gr');
-    document.querySelector('.lang-toggle').textContent = isGreek ? "GR" : "EN";
-
-    // Optional: update the HTML language
-    document.documentElement.lang = isGreek ? "en" : "el";
-  }
-</script>
+  <script src="language.js"></script>
 </body>
 </html>

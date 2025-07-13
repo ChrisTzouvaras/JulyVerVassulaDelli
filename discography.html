@@ -302,13 +302,15 @@ footer {
   <div class="navbar-container">
     <div class="brand-info">
       <button class="name-button" onclick="window.location.href='index.html'" id="name-button" data-gr="ΒΑΣΟΥΛΑ ΔΕΛΛΗ" data-en="VASSULA DELLI">ΒΑΣΟΥΛΑ ΔΕΛΛΗ</button>
-      <p id="title-text" data-gr="ΜΟΥΣΙΚΟΣ / PERFORMER / ΣΥΝΘΕΤΡΙΑ / ΠΑΙΔΑΓΩΓΟΣ" data-en="MUSICIAN / PERFORMER / COMPOSER / EDUCATOR">ΜΟΥΣΙΚΟΣ / PERFORMER / ΣΥΝΘΕΤΡΙΑ / ΠΑΙΔΑΓΩΓΟΣ</p>
+       <!--<p id="title-text" data-gr="ΜΟΥΣΙΚΟΣ / PERFORMER / ΣΥΝΘΕΤΡΙΑ / ΠΑΙΔΑΓΩΓΟΣ" data-en="MUSICIAN / PERFORMER / COMPOSER / EDUCATOR">
+        ΜΟΥΣΙΚΟΣ / PERFORMER / ΣΥΝΘΕΤΡΙΑ / ΠΑΙΔΑΓΩΓΟΣ
+      </p>-->
     </div>
     <button class="hamburger" onclick="toggleMenu()">☰</button>
     <ul class="nav-links">
          <li class="close-btn"><a href="javascript:void(0)" onclick="toggleMenu()">✕</a></li>
-      <li><a href="bio.html" class="lang" data-gr="Βιογραφικό" data-en="Biography(Bio)">Βιογραφικό</a></li>
-      <li><a href="performance.html" class="lang" data-gr="Παραστάσεις" data-en="Performances(Stage Work)">Παραστάσεις</a></li>
+      <li><a href="bio.html" class="lang" data-gr="Βιογραφικό" data-en="Biography">Βιογραφικό</a></li>
+      <li><a href="performance.html" class="lang" data-gr="Παραστάσεις" data-en="Performances">Παραστάσεις</a></li>
       <li><a href="maestro.html" class="lang" data-gr="Μουσική Προετοιμασία - Διδασκαλία" data-en="Music Preparation – Teaching">Μουσική Προετοιμασία - Διδασκαλία</a></li>
       <li><a href="discography.html" class="lang" data-gr="Δισκογραφία" data-en="Discography">Δισκογραφία</a></li>
       <li><a href="contact.html" class="lang" data-gr="Επικοινωνία" data-en="Contact">Επικοινωνία</a></li>
@@ -329,11 +331,13 @@ footer {
       <div class="content">
         
        
-        <h3 class="lang" data-gr="Παιδικά τραγούδια του σχολείου μας. " data-en="Children's songs from our school. ">Παιδικά τραγούδια του σχολείου μας. </h3>
+        <h3 class="lang" data-gr="Παιδικά τραγούδια του σχολείου μας I & II. " data-en="Children's songs from our school I & II. ">Παιδικά τραγούδια του σχολείου μας I & II. </h3>
         <p class="lang" data-gr="Δύο άλμπουμς με την παιδική χορωδία της Μοντεσσοριανής Σχολής Αθηνών Μ. Γουδέλη." data-en="Two albums with the Children’s Choir of the Montessori School of Athens “Maria Goudeli”.">Δύο άλμπουμς με την παιδική χορωδία της Μοντεσσοριανής Σχολής Αθηνών Μ. Γουδέλη.</p>
         <p> 2018 & 2024</p>
-        <img src="./paidiki xorodia cd.jpeg" alt="paidiki 1">
-        <img src="./cd tragoudia sxoleiou mas.png" alt="paidiki 2">
+        <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 10px;">
+  <img src="./paidiki xorodia cd.jpeg" alt="paidiki 1" style="width: 100px; height: 100px; object-fit: cover; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);">
+  <img src="./cd tragoudia sxoleiou mas.png" alt="paidiki 2" style="width: 100px; height: 100px; object-fit: cover; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);">
+</div>
       </div>
     </div>
 
@@ -344,8 +348,10 @@ footer {
         <h3 class="lang" data-gr="Πολυφωνικές Διαδρομές, Πλειάδες. " data-en="Polyphonic Journeys, Pleiades. ">Πολυφωνικές Διαδρομές, Πλειάδες.</h3>
         <p class="lang" data-gr="Πολυφωνικά τραγούδια από Ελλάδα και εξωτερικό" data-en="Polyphonic songs from Greece and abroad">Πολυφωνικά τραγούδια από Ελλάδα και εξωτερικό</p>
         <p> 2021</p>
-      
-        <img src="./ΕΞΩΦΥΛΛΟ.jpg" alt="Πολυφωνικές Διαδρομές Πλειάδες">
+       <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 10px;">
+        <img src="./ΕΞΩΦΥΛΛΟ.jpg" alt="Πολυφωνικές Διαδρομές Πλειάδες" style="width: 100px; height: 100px; object-fit: cover; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);">
+       </div>
+        
       </div>
     </div>
 
@@ -354,7 +360,17 @@ footer {
         
         <h3 class="lang" data-gr="Τέσσερα ερωτικά τραγούδια του Αλέξανδρου Καψοκαβαδή" data-en="Four Love Songs by Alexandros Kapsokavadis">Τέσσερα ερωτικά τραγούδια του Αλέξανδρου Καψοκαβαδή</h3>
         <p>2020</p>
-        <iframe src="https://www.youtube.com/embed/O3ModnGPiis" allowfullscreen></iframe>
+          <iframe 
+  width="400" 
+  height="225" 
+  src="https://www.youtube.com/embed/O3ModnGPiis" 
+  title="YouTube video player" 
+  frameborder="0" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+  allowfullscreen 
+  style="margin-top: 20px; border-radius: 0px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+</iframe>
+        
       </div>
     </div>
 
@@ -364,7 +380,10 @@ footer {
         <h3 class="lang" data-gr="Γυναίκες της Πέτρας – Encardia + Πλειάδες. " data-en="Women of Stone – Encardia + Pleiades. ">Γυναίκες της Πέτρας – Encardia + Πλειάδες.</h3>
         <p class="lang" data-gr="Διπλό CD + DVD" data-en="Double CD + DVD">Διπλό CD + DVD</p>
         <p>2015</p>
-        <img src="./cd gynaikes petras.jpeg" alt="Γυναίκες της Πέτρας">
+        <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 10px;">
+           <img src="./cd gynaikes petras.jpeg" alt="Γυναίκες της Πέτρας" style="width: 100px; height: 100px; object-fit: cover; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);">
+        </div>
+       
       </div>
     </div>
 
@@ -374,7 +393,10 @@ footer {
         <h3 class="lang" data-gr="Περιπλανώμενες Πλειάδες, Πλειάδες. " data-en="Wandering Pleiades, Pleiades. ">Περιπλανώμενες Πλειάδες, Πλειάδες.</h3>
         <p class="lang" data-en="Polyphonic Epirotic songs" data-gr="Πολυφωνικά ηπειρώτικα τραγούδια">Πολυφωνικά ηπειρώτικα τραγούδια</p>
         <p>2012</p>
-        <img src="./periplanomenes peiades.jpg" alt="Περιπλανώμενες Πλειάδες">
+         <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 10px;">
+          <img src="./periplanomenes peiades.jpg" alt="Περιπλανώμενες Πλειάδες" style="width: 100px; height: 100px; object-fit: cover; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);">
+         </div>
+        
       </div>
     </div>
 
@@ -384,47 +406,22 @@ footer {
         <h3 class="lang" data-gr="AEALO, Rotting Christ. " data-en="AEALO, Rotting Christ. ">AEALO, Rotting Christ.</h3>
         <p class="lang" data-gr="Φωνητικά (Φωνητικό Σύνολο Πλειάδες)" data-en="Vocals (Pleades Vocal Ensemble)">Φωνητικά (Φωνητικό Σύνολο Πλειάδες)</p>
         <p>2010</p>
-        <img src="./cd aealo.jpeg" alt="AEALO Rotting Christ">
+       <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 10px;">
+        <img src="./cd aealo.jpeg" alt="AEALO Rotting Christ" style="width: 100px; height: 100px; object-fit: cover; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);">
+       </div>
+        
       </div>
     </div>
 
   </div>
 
   <hr>
-  <footer>
-    <p>&copy; 2025 Βασούλα Δελλή<br>Created by Chris Tzouvaras</p>
-  </footer>
+<footer>
+  <p>&copy; 2025 Vassula Delli<br>
+     Created by Chris Tzouvaras</p>
+</footer>
 
- <script>
-  function toggleMenu() {
-    document.querySelector('.nav-links').classList.toggle('open');
-  }
-
-  function toggleLanguage() {
-    let nameBtn = document.getElementById('name-button');
-    let titleText = document.getElementById('title-text');
-    let isGreek = nameBtn.textContent === nameBtn.getAttribute('data-gr');
-
-    document.querySelectorAll('.lang').forEach(el => {
-      if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
-        if (el.hasAttribute("placeholder")) {
-          el.placeholder = isGreek ? el.getAttribute("data-en") : el.getAttribute("data-gr");
-        }
-        if (el.type === "submit" && el.hasAttribute("value")) {
-          el.value = isGreek ? el.getAttribute("data-en") : el.getAttribute("data-gr");
-        }
-      } else {
-        el.innerHTML = isGreek ? el.getAttribute("data-en") : el.getAttribute("data-gr");
-      }
-    });
-
-    titleText.innerHTML = isGreek ? titleText.getAttribute('data-en') : titleText.getAttribute('data-gr');
-    nameBtn.textContent = isGreek ? nameBtn.getAttribute('data-en') : nameBtn.getAttribute('data-gr');
-    document.querySelector('.lang-toggle').textContent = isGreek ? "GR" : "EN";
-
-    document.documentElement.lang = isGreek ? "en" : "el";
-  }
-</script>
+  <script src="language.js"></script>
 
 
 </body>
